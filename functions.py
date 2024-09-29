@@ -68,7 +68,7 @@ def CachipunAleatorio(eleccion):
 def Arbitraje(jugador, maquina):
     maquina = maquina+'\n'
     if jugador == maquina:
-        return "Empate"
+        return "Empate, Las grandes mentes piensan igual"
     
     elif (jugador == 'Piedra\n' and maquina == 'Tijera\n') or (jugador == 'Tijera\n' and maquina == 'Papel\n') or (jugador == 'Papel\n' and maquina == 'Piedra\n'):
         return "Ganaste, Felicidades Jugador!!!"

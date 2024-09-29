@@ -1,10 +1,6 @@
 Pre requisitos:
-Python version  3.11.0
-keras           2.12.0
-pillow          10.4.0
-tensorflow      2.12.0
-numpy           1.23.5
-opencv-python   4.10.0.84
+Ejecutar installLib.py para descargar todas las librerias necesarias.
+Es posible que aún existan librerias basura, sin embargo preferí dejarlas en caso de que sean necesarias
 
 Instrucciones de uso:
 1) Ejecutar camera.py
