@@ -1,6 +1,7 @@
 from keras.models import load_model  # TensorFlow es requerido para que Keras funcione
 from PIL import Image, ImageOps  # Recordar instalar pillow, no PIL
 import numpy as np
+import random
 
 def LeerEleccion(RutaImagen):
     # Desactivar notacion cientifica para mayor claridad
@@ -46,13 +47,20 @@ def LeerEleccion(RutaImagen):
     return class_name[2:], confidence_score
 
 # Un algoritmo de cachipun Imposible de Ganar
-def Cachipun(eleccion):
+def CachipunImposible(eleccion):
     if eleccion == "Piedra\n":
         return 'Papel'
     elif eleccion == "Papel\n":
         return 'Tijera'
     elif eleccion == "Tijera\n":
         return 'Piedra'
+    else:
+        raise 'No pude reconocer tu eleccion'
+
+# Un algoritmo de cachipun con elección aleatoria por parte de la máquina
+def CachipunAleatorio(eleccion):
+    if eleccion == "Piedra\n" or eleccion == "Papel\n" or eleccion == "Tijera\n":
+        return random.choice(['Piedra', 'Papel', 'Tijera'])
     else:
         raise 'No pude reconocer tu eleccion'
 
@@ -63,7 +71,7 @@ def Arbitraje(jugador, maquina):
         return "Empate"
     
     elif (jugador == 'Piedra\n' and maquina == 'Tijera\n') or (jugador == 'Tijera\n' and maquina == 'Papel\n') or (jugador == 'Papel\n' and maquina == 'Piedra\n'):
-        return "Ganaste, Felicidades Jugador"
+        return "Ganaste, Felicidades Jugador!!!"
 
     else:
-        return "Vuelvo a ganar, Suerte la próxima vez"
+        return "Vuelvo a ganar!!! Suerte la próxima vez"

@@ -1,7 +1,7 @@
 # Importar la biblioteca OpenCV
 import cv2
 #Importar las funciones LeerEleccion, Cachipun y Arbitraje
-from functions import LeerEleccion, Cachipun, Arbitraje
+from functions import LeerEleccion, CachipunAleatorio, CachipunImposible, Arbitraje
 
 # Abrir la cámara predeterminada (índice 0), si incluyes otras como una webcam externa puedes cambiarlo a (1)
 cap = cv2.VideoCapture(0)
@@ -14,6 +14,8 @@ cap.set(4, 1080)
 
 c = 1
 
+imposible = True
+
 # Bucle infinito para capturar continuamente fotogramas de la cámara
 while True:
     # Leer un fotograma de la cámara
@@ -23,6 +25,17 @@ while True:
     cv2.imshow('Cam', img)
 
     if ret == True:
+        
+        if cv2.waitKey(1)==ord('d'):
+            # Se activará el cachipun dificil (imposible)
+            imposible = True
+            print('Activado el modo dificil')
+
+        if cv2.waitKey(1)==ord('a'):
+            # Se activará el cachipun aleatorio
+            imposible = False
+            print('Activado el modo aleatorio')
+
         if cv2.waitKey(1)==ord('s'):
             name = "foto"+str(c)+".png"
             cv2.imwrite(name, img)
@@ -31,8 +44,12 @@ while True:
             print("Creo que tu eleccion es", player)
 
             # Randint for machine
-            machine = Cachipun(player)
-            print("Asi que mi eleccion es", machine, "\n")
+            if imposible:
+                machine = CachipunImposible(player)
+            else:
+                machine = CachipunAleatorio(player)
+
+            print("Mi eleccion es", machine, "\n")
 
             print(Arbitraje(player, machine))
 
