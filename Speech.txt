@@ -1,0 +1,3 @@
+Esta hecho con la ayuda de "Keras", una de las API de redes neuronales
+más utilizadas para el desarrollo y pruebas de redes neuronales.
+Escrita en Python y como motor de back-end Tensorflow (de Google)

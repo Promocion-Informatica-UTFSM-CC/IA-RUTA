@@ -1,0 +1,18 @@
+Pre requisitos:
+Python version  3.11.0
+keras           2.12.0
+pillow          10.4.0
+tensorflow      2.12.0
+numpy           1.23.5
+opencv-python   4.10.0.84
+
+Instrucciones de uso:
+1) Ejecutar camera.py
+2) Mostrar con las manos alguna de las posibles elecciones para el cachipun (Piedra, Papel o Tijera) a la camara
+3) La camara tomará una foto al apretar la tecla "s"
+4) La foto se procesará y se comparará con las posibles elecciones
+5) Se mostrará en pantalla la eleccion del jugador y la de la maquina
+6) Se mostrará el resultado de la eleccion (Gana el jugador, Gana la maquina o Empate)
+7) Esto se ejecutará en un bucle hasta que se presione la tecla "q", donde la cámara se cerrará
+
+Su uso es recomendado en fondos blancos planos para mayor efectividad en cada lectura
