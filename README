@@ -10,5 +10,6 @@ Instrucciones de uso:
 5) Se mostrará en pantalla la eleccion del jugador y la de la maquina
 6) Se mostrará el resultado de la eleccion (Gana el jugador, Gana la maquina o Empate)
 7) Esto se ejecutará en un bucle hasta que se presione la tecla "q", donde la cámara se cerrará
+8) También se agregó una funcionalidad que permmita una elección aleatoria de la máaquina, con el objetivo de que los visitantes tengan la oportunidad de ganarle al programa, este modo se activa aprentando la tecla "a" (aleatorio) y se apaga con la tecla "d" (difícil)
 
 Su uso es recomendado en fondos blancos planos para mayor efectividad en cada lectura
